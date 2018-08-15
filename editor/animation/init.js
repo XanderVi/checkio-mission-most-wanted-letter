@@ -59,7 +59,7 @@ requirejs(['ext_editor_io', 'jquery_190', 'raphael_210'],
         var io = new extIO({
             functions: {
                 js: 'mostWanted',
-                python: 'checkio'
+                python: 'most_wanted'
             },
             animation: function($expl, data){
                 var checkioInput = data.in;

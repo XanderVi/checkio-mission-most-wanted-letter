@@ -1,6 +1,11 @@
 <div style="text-align: center">
     <img src="{{MEDIA}}title.png" style="max-height: 350px">
 </div>
+
+<p>
+<strong>This translation should be updated. See the English version.</strong>
+</p>
+
 <p>
     Otrzymujesz tekst, który zawiera różne angielskie litery i symbole interpunkcyjne.
     Powinieneś znaleźć najczęściej powtarzającą się literę w tekście. Zwrócona litera musi być mała.<br>
@@ -26,21 +31,23 @@
     <p>
         <strong>Przykłady:</strong>
     </p>
-    <pre class="brush: python">{% if interpreter.slug == "js-node" %}
-mostWanted("Hello World!") == "l"
-mostWanted("How do you do?") == "o"
-mostWanted("One") == "e"
-mostWanted("Oops!") == "o"
-mostWanted("AAaooo!!!!") == "a"
-mostWanted("abe") == "a"
-{% else %}
-checkio("Hello World!") == "l"
-checkio("How do you do?") == "o"
-checkio("One") == "e"
-checkio("Oops!") == "o"
-checkio("AAaooo!!!!") == "a"
-checkio("abe") == "a"
-{% endif %}</pre>
+{% if interpreter.slug == "js-node" %}
+  <pre class="brush: javascript">
+mostWanted("Hello World!") == ["l"]
+mostWanted("How do you do?") == ["o"]
+mostWanted("One") == ["o", "n", "e"]
+mostWanted("Oops!") == ["o"]
+mostWanted("AAaooo!!!!") == ["a", "o"]
+mostWanted("abe") == ["a", "b", "e"]</pre>
+  {% else %}
+  <pre class="brush: python">
+most_wanted("Hello World!") == ["l"]
+most_wanted("How do you do?") == ["o"]
+most_wanted("One") == ["o", "n", "e"]
+most_wanted("Oops!") == ["o"]
+most_wanted("AAaooo!!!!") == ["a", "o"]
+most_wanted("abe") == ["a", "b", "e"]</pre>
+  {% endif %}
 </div>
 
 <p class="for_info_only">

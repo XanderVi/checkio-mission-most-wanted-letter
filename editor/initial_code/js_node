@@ -1,16 +1,28 @@
 "use strict";
 
 function mostWanted(data) {
-    return data;
+    return ['a'];
 }
 
 var assert = require('assert');
 
 if (!global.is_checking) {
-    assert.equal(mostWanted("Hello World!"), "l", "1st example");
-    assert.equal(mostWanted("How do you do?"), "o", "2nd example");
-    assert.equal(mostWanted("One"), "e", "3rd example");
-    assert.equal(mostWanted("Oops!"), "o", "4th example");
-    assert.equal(mostWanted("AAaooo!!!!"), "a", "Letters");
+    
+    var one = mostWanted("Hello World!");
+    one.sort();
+    var two = mostWanted("How do you do?");
+    two.sort();
+    var three = mostWanted("One");
+    three.sort();
+    var four = mostWanted("Oops!");
+    four.sort();
+    var five = mostWanted("AAaooo!!!!");
+    five.sort();
+
+    assert.equal(one[0], "l", "1st example");
+    assert.equal(two[0], "o", "2nd example");
+    assert.equal(three[0], "e", "3rd example");
+    assert.equal(four[0], "o", "4th example");
+    assert.equal(five[0], "a", "Letters");
     console.log("Coding complete? Click 'Check' to review your tests and earn cool rewards!");
 }

@@ -10,8 +10,8 @@
 </p>
 <p>
     If you have <strong>two or more letters with the same frequency</strong>,
-    then return the letter which comes first in the latin alphabet.
-    For example -- "one" contains "o", "n", "e" only once for each, thus we choose "e".
+    then return all of them as the list.
+    For example -- "Hello, Evan" should return ['e', 'l'].
 </p>
 
 
@@ -20,28 +20,30 @@
 </p>
 
 <p>
-    <strong>Output: </strong> The most frequent letter in lower case as a string.
+    <strong>Output: </strong> The list of the most frequent letters in lower case.
 </p>
 
 <div class="for_info_only">
     <p>
         <strong>Example:</strong>
     </p>
-    <pre class="brush: python">{% if interpreter.slug == "js-node" %}
-mostWanted("Hello World!") == "l"
-mostWanted("How do you do?") == "o"
-mostWanted("One") == "e"
-mostWanted("Oops!") == "o"
-mostWanted("AAaooo!!!!") == "a"
-mostWanted("abe") == "a"
-{% else %}
-checkio("Hello World!") == "l"
-checkio("How do you do?") == "o"
-checkio("One") == "e"
-checkio("Oops!") == "o"
-checkio("AAaooo!!!!") == "a"
-checkio("abe") == "a"
-{% endif %}</pre>
+  {% if interpreter.slug == "js-node" %}
+  <pre class="brush: javascript">
+mostWanted("Hello World!") == ["l"]
+mostWanted("How do you do?") == ["o"]
+mostWanted("One") == ["o", "n", "e"]
+mostWanted("Oops!") == ["o"]
+mostWanted("AAaooo!!!!") == ["a", "o"]
+mostWanted("abe") == ["a", "b", "e"]</pre>
+  {% else %}
+  <pre class="brush: python">
+most_wanted("Hello World!") == ["l"]
+most_wanted("How do you do?") == ["o"]
+most_wanted("One") == ["o", "n", "e"]
+most_wanted("Oops!") == ["o"]
+most_wanted("AAaooo!!!!") == ["a", "o"]
+most_wanted("abe") == ["a", "b", "e"]</pre>
+  {% endif %}
 </div>
 
 <p class="for_info_only">
