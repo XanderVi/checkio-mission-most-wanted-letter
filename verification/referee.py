@@ -36,14 +36,14 @@ from tests import TESTS
 cover_code = '''
 def cover(func, data):
     res = func(data)
-    return sorted(res)[0]
+    return sorted(res)
 '''
 
 js_cover_code = '''
 function cover(func, data){
     var res = func(data)
     res.sort()
-    return res[0]
+    return res
 }
 '''
 
