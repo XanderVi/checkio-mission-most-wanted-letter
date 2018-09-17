@@ -19,10 +19,10 @@ if (!global.is_checking) {
     var five = mostWanted("AAaooo!!!!");
     five.sort();
 
-    assert.equal(one[0], "l", "1st example");
-    assert.equal(two[0], "o", "2nd example");
-    assert.equal(three[0], "e", "3rd example");
-    assert.equal(four[0], "o", "4th example");
-    assert.equal(five[0], "a", "Letters");
+    assert.equal(one, ["l"], "1st example");
+    assert.equal(two, ["o"], "2nd example");
+    assert.equal(three, ["e", "n", "o"], "3rd example");
+    assert.equal(four, ["o"], "4th example");
+    assert.equal(five, ["a", "o"], "Letters");
     console.log("Coding complete? Click 'Check' to review your tests and earn cool rewards!");
 }
